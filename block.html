@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Block Diagram & Workflow - Smart Gas Detector</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a href="index.html">Smart Gas Leakage Detector</a></div>
+    <nav class="topnav">
+      <a href="index.html">Home</a>
+      <a href="block.html">Block Diagram</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="iot.html">IoT Dashboard</a>
+      <a href="contact.html">Contact</a>
+      <button onclick="toggleTheme()" class="theme-btn">🌙</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Block Diagram</h2>
+      <p>Upload your block diagram image to the repository as <code>block.png</code>. It will appear below:</p>
+      <img src="block.png" alt="Block Diagram" class="fullimg">
+    </section>
+
+    <section class="panel">
+      <h2>Workflow</h2>
+      <p>The system runs a self-test, then continuously monitors gas sensors. The microcontroller compares readings with thresholds and triggers alarms, voice playback, relay actions, and IoT logging when leaks are detected.</p>
+
+      <h3>Flowchart</h3>
+      <img src="flowchart.png" alt="Flowchart" class="fullimg">
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© 2025 Smart Gas Detector Project</div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
