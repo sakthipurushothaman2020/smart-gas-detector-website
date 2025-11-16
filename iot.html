@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IoT Dashboard - Smart Gas Detector</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a href="index.html">Smart Gas Leakage Detector</a></div>
+    <nav class="topnav">
+      <a href="index.html">Home</a>
+      <a href="block.html">Block Diagram</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="iot.html">IoT Dashboard</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Live IoT Data</h2>
+      <p>Live gas reading fetched from Firebase Realtime Database. Replace <code>FIREBASE_URL</code> in <code>script.js</code> with your database URL (ends in <code>/gas.json</code>).</p>
+
+      <div class="iot-cards">
+        <div class="iot-card">
+          <h3>Gas Value</h3>
+          <p id="iotGas" class="big-value">--</p>
+        </div>
+        <div class="iot-card">
+          <h3>Last Updated</h3>
+          <p id="iotTime">--</p>
+        </div>
+      </div>
+
+      <h3>How to connect</h3>
+      <ol>
+        <li>Create a Firebase project → Realtime Database.</li>
+        <li>In your ESP32 code, POST/PATCH readings to: <code>https://YOUR_PROJECT.firebaseio.com/gas.json</code></li>
+        <li>Set <code>FIREBASE_URL</code> in <code>script.js</code> to your DB URL.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer"><div>© 2025 Smart Gas Detector Project</div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
