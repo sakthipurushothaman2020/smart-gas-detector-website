@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Gas Leakage Detector</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a href="index.html">Smart Gas Leakage Detector</a></div>
+    <nav class="topnav" id="topnav">
+      <a href="index.html">Home</a>
+      <a href="block.html">Block Diagram</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="iot.html">IoT Dashboard</a>
+      <a href="contact.html">Contact</a>
+      <button id="themeToggle" class="theme-btn" title="Toggle theme">🌙</button>
+      <button id="menuBtn" class="hamburger">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Smart Gas Leakage Detector Using Arduino UNO</h1>
+        <p class="lead">A Safety & IoT-Enabled Embedded System Project — real-time detection, voice alerts, automatic cut-off.</p>
+        <div class="cta-row">
+          <a class="cta" href="block.html">View Block Diagram</a>
+          <a class="cta secondary" href="report.pdf" download>Download Report (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards container">
+      <article class="card">
+        <h3>Self-Testing</h3>
+        <p>Automated health check of sensors, power and connectivity on startup.</p>
+      </article>
+      <article class="card">
+        <h3>Multi-Gas Monitoring</h3>
+        <p>MQ-2, MQ-5, MQ-6 for LPG, methane, CO and smoke detection.</p>
+      </article>
+      <article class="card">
+        <h3>Voice & IoT Alerts</h3>
+        <p>Local voice alerts (ISD1820) + remote voice via IFTTT / Google Assistant using IoT.</p>
+      </article>
+      <article class="card">
+        <h3>Auto Safety Actions</h3>
+        <p>Relay driven gas supply cutoff and exhaust fan activation to mitigate leaks.</p>
+      </article>
+    </section>
+
+    <section id="live" class="panel container">
+      <h2>Live Gas Value</h2>
+      <div class="live-row">
+        <div class="live-card">
+          <span id="gasValue" class="big-value">--</span>
+          <span>Gas Sensor Reading (analog)</span>
+        </div>
+        <div class="live-card">
+          <span id="statusBadge" class="badge neutral">Status</span>
+          <span>System Status</span>
+        </div>
+      </div>
+      <p class="muted">(Live data requires ESP32 → Firebase integration. See IoT Dashboard page.)</p>
+    </section>
+
+    <section class="panel container">
+      <h2>Working Principle</h2>
+      <p>The system begins with a self-test, then continuously reads multiple gas sensors. Readings are compared with a safe threshold. If leakage is detected, local alarms (buzzer, red LED, ISD voice) are triggered, the relay activates for gas cutoff and fan, and the ESP32 logs events to Firebase and can trigger remote voice notifications via IFTTT. Energy-efficient sleep mode reduces power consumption when idle. Data is logged for remote monitoring and analysis.</p>
+    </section>
+
+    <section class="panel container small">
+      <h2>Team</h2>
+      <p><strong>Sakthi Purushothaman</strong><br><strong>Sanjana Praveen Kumar</strong></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <p>© 2025 Smart Gas Detector Project</p>
+    </div>
+    <div class="footer-right">
+      <span>Team: Sakthi Purushothaman &amp; Vardhini B</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
